@@ -31,7 +31,7 @@ RELEASE_DATE: Optional[str] = "2022-09-24"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = "https://ytt917251944.github.io/dataset_jekyll/"
+HOMEPAGE_URL: str = "https://www.kaggle.com/datasets/erickendric/tree-dataset-of-urban-street-classification-leaf"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = 7316995
@@ -43,7 +43,9 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/urban-street-leaf-classifica
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = ["https://www.kaggle.com/datasets/erickendric/tree-dataset-of-urban-street-classification-leaf"]
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = [
+    "https://www.kaggle.com/datasets/erickendric/tree-dataset-of-urban-street-classification-leaf"
+]
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,18 +53,84 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://www.sciencedirect.com/science/article/abs/pii/S0168169923002405?via%3Dihub"]
-BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"https://github.com/ytt917251944/dataset_jekyll"}
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = [
+    "https://www.sciencedirect.com/science/article/abs/pii/S0168169923002405?via%3Dihub"
+]
+BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = ["https://ytt917251944.github.io/dataset_jekyll/"]
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {
+    "GitHub": "https://github.com/ytt917251944/dataset_jekyll"
+}
 
 CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = ["Tingting Yang", "Suyin Zhou", "Zhijie Huang", "Aijun Xu", "Junhua Ye", "Jianxin Yin"]
+AUTHORS: Optional[List[str]] = [
+    "Tingting Yang",
+    "Suyin Zhou",
+    "Zhijie Huang",
+    "Aijun Xu",
+    "Junhua Ye",
+    "Jianxin Yin",
+]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Zhejiang Agriculture and Forestry University"]
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
+    "Zhejiang Agriculture and Forestry University"
+]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://www.zafu.edu.cn/"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__":"The dataset includes classification tags: ***acer_palmatum***, ***aesculus_chinensis*** etc"}
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
+    "classification set classes": [
+        "acer_palmatum",
+        "aesculus_chinensis",
+        "albizia_julibrissin",
+        "aucuba_japonica_var._variegata",
+        "buxus_sinica_var._parvifolia",
+        "camptotheca_acuminata",
+        "cedrus_deodara",
+        "celtis_sinensis",
+        "cinnamomum_camphora_(linn)_presl",
+        "elaeocarpus_decipiens",
+        "euonymus_japonicus",
+        "euonymus_japonicus_aureo_marginatus",
+        "flowering_cherry",
+        "ginkgo_biloba",
+        "juniperus_chinensis_kaizuca",
+        "koelreuteria_paniculata",
+        "lagerstroemia_indica",
+        "ligustrum_lucidum",
+        "liquidambar_formosana",
+        "liriodendron_chinense",
+        "llex_cornuta",
+        "loropetalum_chinense_var._rubrum",
+        "magnolia_grandiflora_l",
+        "magnolia_liliflora_desr",
+        "malushalliana",
+        "metasequoia_glyptostroboides",
+        "michelia_chapensis",
+        "michelia_figo_(lour.)_spreng",
+        "nandina_domestica",
+        "nerium_oleander_l",
+        "osmanthus_fragrans",
+        "photinia_serratifolia",
+        "pinus_massoniana_lamb",
+        "pinus_parviflora",
+        "pittosporum_tobira",
+        "platanus",
+        "platycladus_orientalis_beverlevensis",
+        "podocarpus_macrophyllus",
+        "populus_l",
+        "prunus_cerasifera_f._atropurpurea",
+        "prunus_persica",
+        "rhododendron__pulchrum",
+        "sabina_chinensis_cv._pyramidalis",
+        "salix_babylonica",
+        "sapindus_saponaria",
+        "styphnolobium_japonicum",
+        "taxodium_ascendens_brongn",
+        "triadica_sebifera",
+        "viburnum_odoratissimum",
+        "zelkova_serrata",
+    ],
+}
 TAGS: Optional[List[str]] = None
 
 
@@ -76,7 +144,9 @@ SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = None
 def check_names():
     fields_before_upload = [PROJECT_NAME]  # PROJECT_NAME_FULL
     if any([field is None for field in fields_before_upload]):
-        raise ValueError("Please fill all fields in settings.py before uploading to instance.")
+        raise ValueError(
+            "Please fill all fields in settings.py before uploading to instance."
+        )
 
 
 def get_settings():
@@ -100,7 +170,9 @@ def get_settings():
     }
 
     if any([field is None for field in settings.values()]):
-        raise ValueError("Please fill all fields in settings.py after uploading to instance.")
+        raise ValueError(
+            "Please fill all fields in settings.py after uploading to instance."
+        )
 
     settings["release_date"] = RELEASE_DATE
     settings["download_original_url"] = DOWNLOAD_ORIGINAL_URL
