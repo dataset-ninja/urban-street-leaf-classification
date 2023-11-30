@@ -1,6 +1,6 @@
 Dataset **Urban Street: Leaf Classification** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/q/T/Jm/lo5yVMOVf8D0m89r3JO4gRr1Cqogxdm28hhU1RJnOgYm4Sv9s9NwAGBhWcID35mk6FQ4CHSXXEe1d7WJBufZDzqkbbvPlBWfplzIVDuM5cs7VqxUHi4ktupX9nhF.tar)
+ [Download](https://www.dropbox.com/scl/fi/cl2lfut0sp45y1qmb9aik/urban-street-leaf-classification-DatasetNinja.tar?rlkey=mmmntknt10u2hs1dgjmmtk708&dl=1)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
